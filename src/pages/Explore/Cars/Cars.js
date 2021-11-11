@@ -1,0 +1,33 @@
+import React from "react";
+import { Button, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+const Cars = (props) => {
+  //props destructure
+  const { _id, name, img, desc, price } = props.car;
+  console.log(props.car);
+  return (
+    <Col lg={4} md={6} sm={12}>
+      <div className="cards shadow border-1 mb-4" id="card">
+        <img src={img} className="card-img-top" id="cardImg" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title ms-1">{name}</h5>
+          <div className="d-flex justify-content-between ms-1">
+            <p>{desc}</p>
+          </div>
+          <h6>
+            <i className="fas fa-dollar-sign text-danger"> </i>
+            {price}
+          </h6>
+        </div>
+        <div className="mx-3 mb-2">
+          <Link to={`/purchase/${_id}`}>
+            <Button variant="success">Book Now</Button>
+          </Link>
+        </div>
+      </div>
+    </Col>
+  );
+};
+
+export default Cars;

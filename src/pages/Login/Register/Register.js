@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import swal from "sweetalert";
 import img from "../../../ass12/loginPic.jpg";
 import useAuth from "../../../hooks/useAuth";
 const Register = () => {
   const [loginData, setLoginData] = useState({});
+  const history = useHistory();
   const { user, registerUser, isLoading, authError } = useAuth();
-  const handleOnChange = (e) => {
+  const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData };
@@ -19,7 +20,7 @@ const Register = () => {
       alert("Your password didnot match");
       return;
     }
-    registerUser(loginData.email, loginData.password);
+    registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
   };
   return (
@@ -34,10 +35,22 @@ const Register = () => {
                   <form onSubmit={handleOnSubmit}>
                     <div className="form-field">
                       <input
+                        type="text"
+                        required
+                        name="name"
+                        onBlur={handleOnBlur}
+                      />
+                      <span></span>
+                      <label htmlFor="">
+                        <i className="fas fa-envelope"></i> Username
+                      </label>
+                    </div>
+                    <div className="form-field">
+                      <input
                         type="email"
                         required
                         name="email"
-                        onChange={handleOnChange}
+                        onBlur={handleOnBlur}
                       />
                       <span></span>
                       <label htmlFor="">
@@ -49,7 +62,7 @@ const Register = () => {
                         type="password"
                         required
                         name="password"
-                        onChange={handleOnChange}
+                        onBlur={handleOnBlur}
                       />
                       <span></span>
                       <label htmlFor="">
@@ -61,7 +74,7 @@ const Register = () => {
                         type="password"
                         required
                         name="password2"
-                        onChange={handleOnChange}
+                        onBlur={handleOnBlur}
                       />
                       <span></span>
                       <label htmlFor="">

@@ -7,14 +7,34 @@ const Navigation = () => {
   const { user, logout } = useAuth();
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="transparent">
         <Container>
           <Navbar.Brand href="#home">CarZone</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <NavLink to="/explore">Explore</NavLink>
-              <Nav.Link href="#pricing">Dashboard</Nav.Link>
+            <Nav className="mx-auto">
+              <NavLink
+                to="/explore"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  margin: "auto",
+                  marginLeft: "10px",
+                }}
+              >
+                Explore
+              </NavLink>
+              <NavLink
+                to="/dashboard"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  margin: "auto",
+                  marginLeft: "10px",
+                }}
+              >
+                Dashboard
+              </NavLink>
               {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -30,6 +50,7 @@ const Navigation = () => {
               </NavDropdown> */}
             </Nav>
             <Nav>
+              <span className="text-danger">{user?.displayName}</span>
               {user?.email ? (
                 <Button onClick={logout}>Logout</Button>
               ) : (

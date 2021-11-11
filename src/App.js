@@ -5,8 +5,10 @@ import Home from "./pages/Home/Home/Home";
 import Login from "./pages/Login/Login/Login";
 import Register from "./pages/Login/Register/Register";
 import AuthProvider from "./contexts/AuthProvider";
-import Explore from "./pages/Explore/Explore";
 import PrivateRoute from "./pages/Login/PrivateRoute.js/PrivateRoute";
+import AllCars from "./pages/Explore/AllCars/AllCars";
+import Dashborad from "./pages/Dashboard/Dashboard/Dashborad";
+import Purchase from "./pages/Explore/Purchase/Purchase";
 function App() {
   return (
     <AuthProvider>
@@ -19,10 +21,16 @@ function App() {
             <Home />
           </Route>
           <PrivateRoute path="/explore">
-            <Explore />
+            <AllCars />
           </PrivateRoute>
+          <Route path="/purchase/:carID">
+            <Purchase />
+          </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/dashboard">
+            <Dashborad />
           </Route>
           <Route path="/register">
             <Register />
