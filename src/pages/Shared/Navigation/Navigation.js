@@ -1,3 +1,4 @@
+import { Box } from "@mui/system";
 import React from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
@@ -24,17 +25,7 @@ const Navigation = () => {
               >
                 Explore
               </NavLink>
-              <NavLink
-                to="/dashboard"
-                style={{
-                  textDecoration: "none",
-                  color: "white",
-                  margin: "auto",
-                  marginLeft: "10px",
-                }}
-              >
-                Dashboard
-              </NavLink>
+
               {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
@@ -52,7 +43,20 @@ const Navigation = () => {
             <Nav>
               <span className="text-danger">{user?.displayName}</span>
               {user?.email ? (
-                <Button onClick={logout}>Logout</Button>
+                <Box>
+                  <NavLink
+                    to="/dashboard"
+                    style={{
+                      textDecoration: "none",
+                      color: "white",
+                      margin: "auto",
+                      marginLeft: "10px",
+                    }}
+                  >
+                    Dashboard
+                  </NavLink>
+                  <Button onClick={logout}>Logout</Button>
+                </Box>
               ) : (
                 <NavLink
                   to="/login"
