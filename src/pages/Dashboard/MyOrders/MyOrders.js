@@ -48,10 +48,10 @@ const MyOrders = () => {
               <th>SL.</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Reg. Date</th>
+              <th>Order Date</th>
               <th>Address</th>
-              <th>Place</th>
-              <th>Amount</th>
+              <th>Brand</th>
+              <th>Price</th>
               <th>Status</th>
             </tr>
           </thead>

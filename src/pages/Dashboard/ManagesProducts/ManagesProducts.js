@@ -1,13 +1,11 @@
 import React from "react";
 import { Button, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
-const Cars = (props) => {
+const ManagesProducts = (props) => {
   //props destructure
-  const { _id, name, img, desc, price } = props.car;
-  console.log(props.car);
+  const { name, img, desc, price } = props.car;
   return (
-    <Col lg={4} md={6} sm={12}>
+    <Col lg={3} md={3} sm={12}>
       <div className="cards shadow border-1 mb-4" id="card">
         <img src={img} className="card-img-top" id="cardImg" alt="..." />
         <div className="card-body">
@@ -21,15 +19,13 @@ const Cars = (props) => {
           </h6>
         </div>
         <div>
-          <Link to={`/purchase/${_id}`}>
-            <Button variant="success" className="purchaceBtn">
-              Purchase Now
-            </Button>
-          </Link>
+          <Button variant="danger" className="purchaceBtn">
+            DELETE PRODUCT
+          </Button>
         </div>
       </div>
     </Col>
   );
 };
 
-export default Cars;
+export default ManagesProducts;

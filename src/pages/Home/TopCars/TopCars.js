@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import Cars from "../../Explore/Cars/Cars";
+import Top from "../Top/Top";
 
 const TopCars = () => {
   const [cars, setCars] = useState([]);
@@ -13,17 +14,16 @@ const TopCars = () => {
   const topcars = cars.slice(0, 6);
   return (
     <div>
-      <h1>{topcars.length}</h1>
       <div>
         <div className="p-2 ">
-          <h2 className="text-center my-4">Available Services</h2>
-          {/* <Container>
+          <h2 className="text-center my-4">Top Cars</h2>
+          <Container>
             <Row>
               {topcars?.map((service) => (
-                <Car key={service._id} service={service}></Car>
+                <Top key={service._id} service={service}></Top>
               ))}
             </Row>
-          </Container> */}
+          </Container>
         </div>
       </div>
     </div>

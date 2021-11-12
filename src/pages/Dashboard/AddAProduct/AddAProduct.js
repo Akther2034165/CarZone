@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
-
+import "./AddAProduct.css";
 const AddAProduct = () => {
   const {
     register,
@@ -17,7 +17,6 @@ const AddAProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           swal("Great!", "You Added a New Place!", "success");
           reset();
@@ -25,12 +24,12 @@ const AddAProduct = () => {
       });
   };
   return (
-    <div className="container mb-4 mt-5 adding-spots">
-      <h2 className="text-center m-2">Add a New Tour Spot</h2>
+    <div className="container mb-4 mt-5 adding-product">
+      <h2 className="text-center m-2">Add a new Product</h2>
       <div>
-        <form onSubmit={handleSubmit(onSubmit)} className="spotsfrom">
+        <form onSubmit={handleSubmit(onSubmit)} className="carsfrom">
           <input
-            placeholder="Place title"
+            placeholder="Car Brand"
             defaultValue=""
             {...register("name", { required: true })}
           />
@@ -60,7 +59,7 @@ const AddAProduct = () => {
           )}
           <br />
           <textarea
-            placeholder="Details of place"
+            placeholder="Details of Car"
             {...register("details", { required: true })}
           />
           <br />
@@ -81,7 +80,7 @@ const AddAProduct = () => {
           <br />
 
           <button className="btn btn-danger placeBtn" type="submit">
-            Add Place
+            Add a Product
           </button>
         </form>
       </div>

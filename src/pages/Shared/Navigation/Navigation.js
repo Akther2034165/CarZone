@@ -1,9 +1,9 @@
 import { Box } from "@mui/system";
 import React from "react";
-import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-
+import "./Navigation.css";
 const Navigation = () => {
   const { user, logout } = useAuth();
   return (
@@ -15,6 +15,17 @@ const Navigation = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
               <NavLink
+                to="/home"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  margin: "auto",
+                  marginLeft: "10px",
+                }}
+              >
+                Home
+              </NavLink>
+              <NavLink
                 to="/explore"
                 style={{
                   textDecoration: "none",
@@ -25,23 +36,19 @@ const Navigation = () => {
               >
                 Explore
               </NavLink>
-
-              {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
+              <NavLink
+                to="/explore"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  margin: "auto",
+                  marginLeft: "10px",
+                }}
+              >
+                Contact us
+              </NavLink>
             </Nav>
             <Nav>
-              <span className="text-danger">{user?.displayName}</span>
               {user?.email ? (
                 <Box>
                   <NavLink
@@ -50,25 +57,21 @@ const Navigation = () => {
                       textDecoration: "none",
                       color: "white",
                       margin: "auto",
-                      marginLeft: "10px",
+                      marginRight: "15px",
                     }}
                   >
                     Dashboard
                   </NavLink>
-                  <Button onClick={logout}>Logout</Button>
+                  <Button onClick={logout} variant="danger">
+                    Logout
+                  </Button>
                 </Box>
               ) : (
-                <NavLink
-                  to="/login"
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    margin: "auto",
-                  }}
-                >
-                  Login
+                <NavLink to="/login">
+                  <Button variant="success">Login</Button>
                 </NavLink>
               )}
+              <span className="username">{user?.displayName}</span>
             </Nav>
           </Navbar.Collapse>
         </Container>

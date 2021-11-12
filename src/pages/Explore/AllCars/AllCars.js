@@ -14,7 +14,7 @@ const AllCars = () => {
     <div>
       <Navigation />
       <div className="container p-4">
-        <h2 className="text-center service">What We Offer</h2>
+        <h2 className="text-center service">Car's Collection</h2>
         <hr
           style={{
             width: "250px",

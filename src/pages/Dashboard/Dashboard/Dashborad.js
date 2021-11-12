@@ -2,34 +2,28 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
+import PersonIcon from "@mui/icons-material/Person";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
-import { Button } from "react-bootstrap";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AddIcon from "@mui/icons-material/Add";
+import CreateIcon from "@mui/icons-material/Create";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import MyOrders from "../MyOrders/MyOrders";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import AddAProduct from "../AddAProduct/AddAProduct";
 import useAuth from "../../../hooks/useAuth";
+import ManageProduct from "../ManageProduct/ManageProduct";
+import Review from "../Review/Review";
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -46,23 +40,49 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       <Link to={`${url}`}>
-        <Button variant="outline-success">Dashboard</Button>
+        <Button variant="text" sx={{ color: "black" }}>
+          <DashboardIcon />
+          Dashboard
+        </Button>
       </Link>
       <br />
       <Link to={`${url}/myorder`}>
-        <Button variant="outline-success">My Order</Button>
+        <Button variant="text" sx={{ color: "black" }}>
+          <ShoppingCartIcon />
+          My Order
+        </Button>
       </Link>
       <Link to={`${url}/allorders`}>
-        <Button variant="outline-success">Manage All Order</Button>
+        <Button variant="text" sx={{ color: "black" }}>
+          <ShoppingCartIcon />
+          Manage All Order
+        </Button>
       </Link>
       <Link to={`${url}/makeadmin`}>
-        <Button variant="outline-success">Make Admin</Button>
+        <Button variant="text" sx={{ color: "black" }}>
+          <PersonIcon /> Make Admin
+        </Button>
       </Link>
       <Link to={`${url}/addproduct`}>
-        <Button variant="outline-success">Add Product</Button>
+        <Button variant="text" sx={{ color: "black" }}>
+          <AddIcon />
+          Add Product
+        </Button>
+      </Link>
+      <Link to={`${url}/manageproduct`}>
+        <Button variant="text" sx={{ color: "black" }}>
+          <AddIcon /> Manage Product
+        </Button>
+      </Link>
+      <Link to={`${url}/review`}>
+        <Button variant="text" sx={{ color: "black" }}>
+          <CreateIcon /> Review
+        </Button>
       </Link>
       <br />
-      <Button onClick={logout}>Logout</Button>
+      <Button variant="contained" onClick={logout} sx={{ color: "white" }}>
+        <LogoutIcon /> Logout
+      </Button>
     </div>
   );
 
@@ -141,6 +161,7 @@ function Dashboard(props) {
           <Route exact path={path}>
             <DashboardHome />
           </Route>
+
           <Route path={`${path}/myorder`}>
             <MyOrders />
           </Route>
@@ -152,6 +173,12 @@ function Dashboard(props) {
           </Route>
           <Route path={`${path}/addproduct`}>
             <AddAProduct />
+          </Route>
+          <Route path={`${path}/manageproduct`}>
+            <ManageProduct />
+          </Route>
+          <Route path={`${path}/review`}>
+            <Review />
           </Route>
         </Switch>
       </Box>

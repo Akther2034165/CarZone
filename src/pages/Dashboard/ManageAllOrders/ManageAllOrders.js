@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
   }, [allOrders]);
 
   const handleApproved = (id, data) => {
-    const newStatus = { status: "Approved" };
+    const newStatus = { status: "shipped" };
     setStatus(newStatus);
     fetch(`http://localhost:5000/orders/${id}`, {
       method: "PUT",
@@ -67,7 +67,7 @@ const ManageAllOrders = () => {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
-                <th>Place</th>
+                <th>Brand</th>
                 <th>Status</th>
               </tr>
             </thead>
