@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Cars = (props) => {
   //props destructure
   const { _id, name, img, desc, price } = props.car;
-  console.log(props.car);
+
   return (
     <Col lg={4} md={6} sm={12}>
       <div className="cards shadow border-1 mb-4" id="card">

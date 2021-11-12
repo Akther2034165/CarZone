@@ -15,6 +15,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AddIcon from "@mui/icons-material/Add";
 import CreateIcon from "@mui/icons-material/Create";
 import LogoutIcon from "@mui/icons-material/Logout";
+import PaymentIcon from "@mui/icons-material/Payment";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
@@ -23,14 +24,15 @@ import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import AddAProduct from "../AddAProduct/AddAProduct";
 import useAuth from "../../../hooks/useAuth";
 import ManageProduct from "../ManageProduct/ManageProduct";
-import Review from "../Review/Review";
+import Payment from "../Payment/Payment";
+import Reviews from "../Reviews/Reviews";
 const drawerWidth = 200;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
-  const { logout } = useAuth();
+  const { logout, admin } = useAuth();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -52,31 +54,41 @@ function Dashboard(props) {
           My Order
         </Button>
       </Link>
-      <Link to={`${url}/allorders`}>
+      {admin && (
+        <Box>
+          <Link to={`${url}/allorders`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <ShoppingCartIcon />
+              Manage All Order
+            </Button>
+          </Link>
+          <Link to={`${url}/makeadmin`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <PersonIcon /> Make Admin
+            </Button>
+          </Link>
+          <Link to={`${url}/addproduct`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <AddIcon />
+              Add Product
+            </Button>
+          </Link>
+          <Link to={`${url}/manageproduct`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <AddIcon /> Manage Product
+            </Button>
+          </Link>
+        </Box>
+      )}
+
+      <Link to={`${url}/payment`}>
         <Button variant="text" sx={{ color: "black" }}>
-          <ShoppingCartIcon />
-          Manage All Order
-        </Button>
-      </Link>
-      <Link to={`${url}/makeadmin`}>
-        <Button variant="text" sx={{ color: "black" }}>
-          <PersonIcon /> Make Admin
-        </Button>
-      </Link>
-      <Link to={`${url}/addproduct`}>
-        <Button variant="text" sx={{ color: "black" }}>
-          <AddIcon />
-          Add Product
-        </Button>
-      </Link>
-      <Link to={`${url}/manageproduct`}>
-        <Button variant="text" sx={{ color: "black" }}>
-          <AddIcon /> Manage Product
+          <PaymentIcon /> Payment
         </Button>
       </Link>
       <Link to={`${url}/review`}>
         <Button variant="text" sx={{ color: "black" }}>
-          <CreateIcon /> Review
+          <CreateIcon /> Reviews
         </Button>
       </Link>
       <br />
@@ -177,8 +189,11 @@ function Dashboard(props) {
           <Route path={`${path}/manageproduct`}>
             <ManageProduct />
           </Route>
+          <Route path={`${path}/payment`}>
+            <Payment />
+          </Route>
           <Route path={`${path}/review`}>
-            <Review />
+            <Reviews />
           </Route>
         </Switch>
       </Box>
