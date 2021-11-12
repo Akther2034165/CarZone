@@ -2,14 +2,16 @@ import React from "react";
 import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import Banner from "../Banner/Banner";
+import Service from "../Service/Service";
 import TopCars from "../TopCars/TopCars";
-import "./home.css";
+import "./Home.css";
 const Home = () => {
   return (
-    <div className="home">
+    <div className="homepage">
       <Navigation />
       <Banner />
       <TopCars />
+      <Service />
       <Footer />
     </div>
   );

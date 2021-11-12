@@ -12,7 +12,7 @@ const Footer = () => {
                 className="footerImg"
                 alt=""
               /> */}
-              <p>Your Travel Partner</p>
+              <p>Your Trusted Company</p>
             </div>
             <div className="footer-col">
               <h4>GET HELP</h4>
