@@ -7,7 +7,7 @@ const MyOrders = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrder/${user.email}`)
+    fetch(`https://intense-stream-09981.herokuapp.com/myOrder/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -22,7 +22,7 @@ const MyOrders = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://intense-stream-09981.herokuapp.com/orders/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

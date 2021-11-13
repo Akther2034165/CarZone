@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import "./Top.css";
 const Top = (props) => {
   const { name, img, desc, price, _id } = props.service;
@@ -14,7 +15,7 @@ const Top = (props) => {
             <p>{desc}</p>
           </div>
           <h6>
-            <i className="fas fa-dollar-sign text-danger"> </i>
+            <AttachMoneyIcon />
             {price}
           </h6>
         </div>

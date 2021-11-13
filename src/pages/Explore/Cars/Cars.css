@@ -1,0 +1,15 @@
+#cardImg:hover {
+  transform: scale(0.9);
+  transition: transform 1.5s;
+  border-radius: 15px;
+}
+#cardImg {
+  height: 220px;
+}
+.cards {
+  border-radius: 10px;
+  height: 410px;
+}
+.purchaceBtn {
+  border: 20px;
+}

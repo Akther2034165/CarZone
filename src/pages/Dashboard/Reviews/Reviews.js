@@ -17,7 +17,7 @@ const Reviews = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://intense-stream-09981.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

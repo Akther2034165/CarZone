@@ -3,6 +3,7 @@ import { Button, Col, Container, Row, Spinner } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import img from "../../../ass12/loginPic.jpg";
 import useAuth from "../../../hooks/useAuth";
+import GoogleIcon from "@mui/icons-material/Google";
 import "./Login.css";
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -64,10 +65,12 @@ const Login = () => {
                   <input type="submit" value="Login" />
 
                   <div className="signup_link">
-                    Not a member? <Link to="/register">Sign Up</Link>
+                    NOT A MEMBER? PLEASE<Link to="/register"> REGISTER</Link>
                   </div>
                 </form>
-                <Button onClick={handleGoogleSignIn}>Google sign in</Button>
+                <Button onClick={handleGoogleSignIn} className="googleBtn">
+                  <GoogleIcon /> Google sign in
+                </Button>
               </div>
             </div>
           </div>

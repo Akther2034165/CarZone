@@ -85,7 +85,7 @@ const Register = () => {
                     <input type="submit" value="Register" />
 
                     <div className="signup_link">
-                      already an user? please <Link to="/login">Login</Link>
+                      ALREADY A MEMBER?<Link to="/login"> LOGIN</Link>
                     </div>
                   </form>
                 )}

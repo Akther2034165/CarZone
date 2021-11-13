@@ -13,7 +13,7 @@ const Purchase = () => {
   const [useraddress, setAddress] = useState("");
   const [regDate, setDate] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:5000/car/${carID}`)
+    fetch(`https://intense-stream-09981.herokuapp.com/car/${carID}`)
       .then((res) => res.json())
       .then((data) => setSingleCar(data));
   });
@@ -43,7 +43,7 @@ const Purchase = () => {
       dangerMode: true,
     }).then((willConfirm) => {
       if (willConfirm) {
-        fetch(`http://localhost:5000/addtocart`, {
+        fetch(`https://intense-stream-09981.herokuapp.com/addtocart`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
   const [status, setStatus] = useState("");
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://intense-stream-09981.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, [allOrders]);
@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
   const handleApproved = (id, data) => {
     const newStatus = { status: "shipped" };
     setStatus(newStatus);
-    fetch(`http://localhost:5000/orders/${id}`, {
+    fetch(`https://intense-stream-09981.herokuapp.com/orders/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -39,7 +39,7 @@ const ManageAllOrders = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://intense-stream-09981.herokuapp.com/orders/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

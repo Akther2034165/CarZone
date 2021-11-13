@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import Top from "../Top/Top";
 
 const TopCars = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/cars")
+    fetch("https://intense-stream-09981.herokuapp.com/cars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
@@ -15,13 +15,21 @@ const TopCars = () => {
     <div>
       <div>
         <div className="p-2 ">
-          <h2 className="text-center my-4">Top Cars</h2>
+          <h2 className="text-center my-4">FEATURES CARS</h2>
           <Container>
-            <Row>
-              {topcars?.map((service) => (
-                <Top key={service._id} service={service}></Top>
-              ))}
-            </Row>
+            {!cars.length ? (
+              <div className="text-center ">
+                <Spinner animation="border" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              </div>
+            ) : (
+              <Row>
+                {topcars?.map((service) => (
+                  <Top key={service._id} service={service}></Top>
+                ))}
+              </Row>
+            )}
           </Container>
         </div>
       </div>

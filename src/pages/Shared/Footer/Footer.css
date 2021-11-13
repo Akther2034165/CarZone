@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 }
 .footer {
-  background-color: #34373b;
+  background-color: #424447;
   color: rgb(224, 212, 212);
   padding: 50px 0;
 }
@@ -53,6 +53,6 @@
   background-color: maroon;
 }
 .footerImg {
-  width: 110px;
-  height: 100px;
+  width: 80%;
+  height: 50px;
 }

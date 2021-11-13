@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="footer-col">
-              {/* <img
-                src="https://i.ibb.co/4PJqLPJ/logo-1.png"
+              <img
+                src="https://i.ibb.co/yXZwNLp/logoss.jpg"
                 className="footerImg"
                 alt=""
-              /> */}
+              />
               <p>Your Trusted Company</p>
             </div>
             <div className="footer-col">
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
           </div>
           <footer className="text-center">
-            &copy; All Right Reserve,Travel Club,2021
+            &copy; All Right Reserve,CarZone,2021
           </footer>
         </div>
       </div>

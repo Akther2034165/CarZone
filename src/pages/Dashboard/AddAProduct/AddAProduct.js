@@ -10,7 +10,7 @@ const AddAProduct = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/cars`, {
+    fetch(`https://intense-stream-09981.herokuapp.com/cars`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

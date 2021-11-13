@@ -15,6 +15,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AddIcon from "@mui/icons-material/Add";
 import CreateIcon from "@mui/icons-material/Create";
 import LogoutIcon from "@mui/icons-material/Logout";
+import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import DashboardHome from "../DashboardHome/DashboardHome";
@@ -49,12 +50,6 @@ function Dashboard(props) {
         </Button>
       </Link>
       <br />
-      <Link to={`${url}/myorder`}>
-        <Button variant="text" sx={{ color: "black" }}>
-          <ShoppingCartIcon />
-          My Order
-        </Button>
-      </Link>
       {admin && (
         <Box>
           <Link to={`${url}/allorders`}>
@@ -81,19 +76,39 @@ function Dashboard(props) {
           </Link>
         </Box>
       )}
+      {!admin && (
+        <Box>
+          <Link to={`${url}/myorder`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <ShoppingCartIcon />
+              My Order
+            </Button>
+          </Link>
+          <Link to={`${url}/payment`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <PaymentIcon /> Payment
+            </Button>
+          </Link>
+          <Link to={`${url}/review`}>
+            <Button variant="text" sx={{ color: "black" }}>
+              <CreateIcon /> Reviews
+            </Button>
+          </Link>
+        </Box>
+      )}
 
-      <Link to={`${url}/payment`}>
-        <Button variant="text" sx={{ color: "black" }}>
-          <PaymentIcon /> Payment
-        </Button>
-      </Link>
-      <Link to={`${url}/review`}>
-        <Button variant="text" sx={{ color: "black" }}>
-          <CreateIcon /> Reviews
-        </Button>
-      </Link>
       <br />
-      <Button variant="contained" onClick={logout} sx={{ color: "white" }}>
+      <Link to="/home">
+        <Button variant="text" sx={{ color: "black", textDecoration: "none" }}>
+          <HomeIcon /> Home
+        </Button>
+      </Link>
+
+      <Button
+        variant="contained"
+        onClick={logout}
+        sx={{ color: "white", background: "red" }}
+      >
         <LogoutIcon /> Logout
       </Button>
     </div>

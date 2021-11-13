@@ -9,6 +9,7 @@ import PrivateRoute from "./pages/Login/PrivateRoute.js/PrivateRoute";
 import AllCars from "./pages/Explore/AllCars/AllCars";
 import Dashborad from "./pages/Dashboard/Dashboard/Dashborad";
 import Purchase from "./pages/Explore/Purchase/Purchase";
+import NotFound from "./pages/NotFound/NotFound";
 function App() {
   return (
     <AuthProvider>
@@ -34,6 +35,9 @@ function App() {
           </PrivateRoute>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route exact path="*">
+            <NotFound />
           </Route>
         </Switch>
       </BrowserRouter>

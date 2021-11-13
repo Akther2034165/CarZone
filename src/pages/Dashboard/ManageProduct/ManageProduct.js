@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Row, Spinner } from "react-bootstrap";
 import { Button, Col } from "react-bootstrap";
+import "./ManageProduct.css";
 const ManageProduct = () => {
   const [cars, setCars] = useState([]);
   const [isDeleted, setIsDeleted] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/cars")
+    fetch("https://intense-stream-09981.herokuapp.com/cars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, [isDeleted]);
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteProduct/${id}`, {
+    fetch(`https://intense-stream-09981.herokuapp.com/deleteProduct/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -46,7 +47,7 @@ const ManageProduct = () => {
       ) : (
         <Row>
           {cars.map((car) => (
-            <Col lg={3} md={3} sm={12}>
+            <Col lg={4} md={4} sm={12}>
               <div className="cards shadow border-1 mb-4" id="card">
                 <img
                   src={car.img}

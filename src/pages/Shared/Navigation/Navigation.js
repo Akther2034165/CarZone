@@ -10,7 +10,9 @@ const Navigation = () => {
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="transparent">
         <Container>
-          <Navbar.Brand href="#home">CarZone</Navbar.Brand>
+          <Navbar.Brand href="#home" className="text-danger">
+            CarZone
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
@@ -35,17 +37,6 @@ const Navigation = () => {
                 }}
               >
                 Explore
-              </NavLink>
-              <NavLink
-                to="/explore"
-                style={{
-                  textDecoration: "none",
-                  color: "white",
-                  margin: "auto",
-                  marginLeft: "10px",
-                }}
-              >
-                Contact us
               </NavLink>
             </Nav>
             <Nav>
