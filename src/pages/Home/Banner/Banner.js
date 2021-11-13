@@ -1,6 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
 import background from "../../../ass12/carbg.jpg";
 const bannerBg = {
   background: `url(${background})`,

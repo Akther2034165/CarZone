@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
-import swal from "sweetalert";
+
 import img from "../../../ass12/loginPic.jpg";
 import useAuth from "../../../hooks/useAuth";
 const Register = () => {
   const [loginData, setLoginData] = useState({});
   const history = useHistory();
-  const { user, registerUser, isLoading, authError } = useAuth();
+  const { registerUser, isLoading } = useAuth();
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;

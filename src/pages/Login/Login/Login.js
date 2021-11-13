@@ -6,7 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 import "./Login.css";
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const { user, loginUser, isLoading, signInWithGoogle } = useAuth();
+  const { loginUser, isLoading, signInWithGoogle } = useAuth();
   //redirect to private route
   const location = useLocation();
   const history = useHistory();

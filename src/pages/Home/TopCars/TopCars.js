@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import Cars from "../../Explore/Cars/Cars";
 import Top from "../Top/Top";
 
 const TopCars = () => {

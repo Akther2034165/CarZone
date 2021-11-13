@@ -1,4 +1,4 @@
-import { TextField, Button, Typography, Alert } from "@mui/material";
+import { TextField, Button, Alert } from "@mui/material";
 import React, { useState } from "react";
 import "./MakeAdmin.css";
 const MakeAdmin = () => {
