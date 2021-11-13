@@ -1,4 +1,7 @@
 import React from "react";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import "./Footer.css";
 const Footer = () => {
   return (
@@ -43,16 +46,13 @@ const Footer = () => {
               <h4>FOLLOW US</h4>
               <div className="social-link">
                 <li>
-                  <i className="fab fa-facebook-f"></i>
+                  <FacebookOutlinedIcon />
                 </li>
                 <li>
-                  <i className="fab fa-instagram"></i>
+                  <EmailOutlinedIcon />
                 </li>
                 <li>
-                  <i className="fab fa-twitter"></i>
-                </li>
-                <li>
-                  <i className="fab fa-youtube"></i>
+                  <CallOutlinedIcon />
                 </li>
               </div>
             </div>

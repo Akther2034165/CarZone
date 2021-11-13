@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component";
 const ReviewCard = (props) => {
   const { name, img, des, rating } = props.review;
   const cardStyle = {
-    border: "2px solid #3498db",
+    border: "1px solid black",
     width: "350px",
     padding: "20px",
     margin: "15px",
