@@ -1,4 +1,4 @@
-import { TextField, Button, Alert } from "@mui/material";
+import { TextField, Button, Alert, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "./MakeAdmin.css";
 const MakeAdmin = () => {
@@ -27,6 +27,7 @@ const MakeAdmin = () => {
   };
   return (
     <div className="adminPart">
+      <Typography variant="h4">MAKE AN USER ADMIN</Typography>
       <form onSubmit={handleAdminSubmit}>
         <TextField
           sx={{ width: "50%" }}
@@ -37,7 +38,7 @@ const MakeAdmin = () => {
           onBlur={handleOnBlur}
         />
         <br /> <br />
-        <Button type="submit" variant="contained">
+        <Button type="submit" variant="contained" sx={{ width: "50%" }}>
           Make Admin
         </Button>
       </form>

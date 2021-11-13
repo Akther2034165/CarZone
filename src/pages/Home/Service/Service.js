@@ -8,7 +8,7 @@ const Service = () => {
     <div>
       <Container>
         <Row className="d-flex align-items-center px-2">
-          <h2 className="text-center mt-5">OUR SERVICES</h2>
+          <h2 className="text-center mt-5">OUR SPECIALITIES</h2>
           <Col xs={12} md={6} lg={6}>
             <p>
               Find Car In Bangladesh . Unlimited Access. 100% Secure. Privacy

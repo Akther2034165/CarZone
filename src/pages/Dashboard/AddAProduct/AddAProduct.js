@@ -24,8 +24,9 @@ const AddAProduct = () => {
       });
   };
   return (
-    <div className="container mb-4 mt-5 adding-product">
-      <h2 className="text-center m-2">Add a new Product</h2>
+    <div className="container mb-4 mt-3 adding-product">
+      <h2 className="text-center m-2">ADD A NEW PRODUCT</h2>
+      <hr />
       <div>
         <form onSubmit={handleSubmit(onSubmit)} className="carsfrom">
           <input
@@ -79,8 +80,8 @@ const AddAProduct = () => {
           )}
           <br />
 
-          <button className="btn btn-danger placeBtn" type="submit">
-            Add a Product
+          <button className="btn btn-success placeBtn" type="submit">
+            ADD A PRODUCT
           </button>
         </form>
       </div>

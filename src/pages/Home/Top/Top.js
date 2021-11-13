@@ -22,7 +22,7 @@ const Top = (props) => {
         <div>
           <Link to={`/purchase/${_id}`}>
             <Button variant="success" className="purchaceBtn">
-              Book Now
+              BUY NOW
             </Button>
           </Link>
         </div>

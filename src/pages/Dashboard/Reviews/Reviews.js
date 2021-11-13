@@ -44,8 +44,8 @@ const Reviews = () => {
     <div className="pt-3">
       <Container>
         <div className="form-area">
-          <h2 className="text-center mb-4 fw-bold" style={{ color: "#3498db" }}>
-            Customer Review
+          <h2 className="text-center mb-4 fw-bold" style={{ color: "black" }}>
+            CUSTOMER REVIEW
           </h2>
           <form onSubmit={handleSubmit}>
             <input

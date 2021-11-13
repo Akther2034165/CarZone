@@ -58,7 +58,7 @@ const ManageAllOrders = () => {
       <div className="allOrder">
         <div className="container">
           <h2 className="text-center my-4">
-            Manage All <span style={{ color: "#ED1C24" }}>Orders</span>
+            MANAGE ALL <span style={{ color: "#ED1C24" }}>ORDERS</span>
           </h2>
           <Table striped bordered hover size="sm" responsive="sm">
             <thead>

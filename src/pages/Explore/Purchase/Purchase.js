@@ -66,7 +66,7 @@ const Purchase = () => {
   return (
     <Container>
       <Row>
-        <h2 className="detailsTitle text-center">Purchase A Car</h2>
+        <h2 className="detailsTitle text-center">PURCHASE A CAR</h2>
         <Col lg={6} md={6} xs={12}>
           <Card
             style={{

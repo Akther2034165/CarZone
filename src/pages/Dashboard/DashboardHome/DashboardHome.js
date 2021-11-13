@@ -7,7 +7,8 @@ const DashboardHome = () => {
   const { user } = useAuth();
   return (
     <div>
-      <h1 className="text-center">Welcome to {user.displayName} Dashboard</h1>
+      <h1 className="text-center">WELCOME TO {user.displayName} DASHBOARD</h1>
+      <p className="text-center">you can explore your data here</p>
       <div className="dashHome">
         <Link to="/home">
           <Button variant="success">BACK TO HOME</Button>

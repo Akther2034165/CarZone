@@ -24,7 +24,7 @@ const Cars = (props) => {
         <div>
           <Link to={`/purchase/${_id}`}>
             <Button variant="success" className="purchaceBtn">
-              Purchase Now
+              BUY NOW
             </Button>
           </Link>
         </div>

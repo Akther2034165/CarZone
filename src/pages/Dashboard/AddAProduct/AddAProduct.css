@@ -8,16 +8,15 @@
   outline: none;
 }
 .carsfrom textarea {
-  width: 350px;
+  width: 365px;
   height: 100px;
   border-radius: 7px;
 }
 .adding-product {
   width: 390px;
-  border: 1px solid darkgray;
   border-radius: 15px;
 }
 .placeBtn {
   margin-bottom: 5px;
-  margin-left: 38%;
+  width: 100%;
 }

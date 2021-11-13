@@ -28,10 +28,10 @@ const ManageProduct = () => {
   };
   return (
     <div className="container">
-      <h2 className="text-center service">Manage Product</h2>
+      <h2 className="text-center ">MANAGE PRODUCTS</h2>
       <hr
         style={{
-          width: "250px",
+          width: "360px",
           margin: "auto",
           height: "3px",
           marginBottom: "10px",

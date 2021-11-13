@@ -15,15 +15,15 @@ const Footer = () => {
                 className="footerImg"
                 alt=""
               />
-              <p>Your Trusted Company</p>
+              <p>YOUR TRUSTED CAR AGENT COMPANY</p>
             </div>
             <div className="footer-col">
               <h4>GET HELP</h4>
               <li>
-                <i className="fas fa-chevron-right"></i> Login
+                <i className="fas fa-chevron-right"></i> LOGIN
               </li>
               <li>
-                <i className="fas fa-chevron-right"></i> About Us
+                <i className="fas fa-chevron-right"></i> ABOUT US
               </li>
               <li>
                 <i className="fas fa-chevron-right"></i> FAQ
@@ -36,10 +36,10 @@ const Footer = () => {
                 Bangladesh
               </li>
               <li>
-                <i className="fas fa-phone"></i> Phone : +74324893837
+                <i className="fas fa-phone"></i> Phone : +458975834
               </li>
               <li>
-                <i className="far fa-clock"></i> Office : 10.00 am - 10.00 pm
+                <i className="far fa-clock"></i> Office : 12.00 am - 8.00 pm
               </li>
             </div>
             <div className="footer-col">

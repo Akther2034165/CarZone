@@ -40,7 +40,7 @@ const MyOrders = () => {
     <div>
       <div className="container myOrder">
         <h2 className="text-center my-4">
-          My <span style={{ color: "#ED1C24" }}>Orders</span>
+          MY <span style={{ color: "#ED1C24" }}>ORDERS</span>
         </h2>
         <Table striped bordered hover size="sm" responsive="sm">
           <thead>
