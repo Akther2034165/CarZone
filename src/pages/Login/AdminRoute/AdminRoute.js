@@ -8,6 +8,9 @@ const AdminRoute = ({ children, ...rest }) => {
   if (isLoading) {
     return <Spinner className="spinner" animation="border" />;
   }
+  if (!admin) {
+    return <Spinner className="spinner" animation="border" />;
+  }
   return (
     <Route
       {...rest}
