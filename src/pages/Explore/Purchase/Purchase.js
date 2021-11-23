@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import swal from "sweetalert";
 import useAuth from "../../../hooks/useAuth";
 import "./Purchase.css";
@@ -12,6 +12,7 @@ const Purchase = () => {
   const [email, setUseremail] = useState("");
   const [useraddress, setAddress] = useState("");
   const [regDate, setDate] = useState("");
+  const history = useHistory();
   useEffect(() => {
     fetch(`https://intense-stream-09981.herokuapp.com/car/${carID}`)
       .then((res) => res.json())
@@ -55,6 +56,7 @@ const Purchase = () => {
             if (data.acknowledged) {
               swal("Good!", "Booking Successful!", "success");
               e.target.reset();
+              history.push("/dashboard/myorder");
             }
           });
       } else {

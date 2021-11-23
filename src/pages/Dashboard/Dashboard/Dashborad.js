@@ -28,7 +28,7 @@ import ManageProduct from "../ManageProduct/ManageProduct";
 import Payment from "../Payment/Payment";
 import Reviews from "../Reviews/Reviews";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
-const drawerWidth = 200;
+const drawerWidth = 220;
 
 function Dashboard(props) {
   const { window } = props;
@@ -42,9 +42,18 @@ function Dashboard(props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Divider />
-      <Link to={`${url}`}>
-        <Button variant="text" sx={{ color: "black" }}>
+      <img
+        style={{ width: "100%", height: "65px", marginTop: "-90px" }}
+        src="https://i.ibb.co/yXZwNLp/logoss.jpg"
+        alt=""
+      />
+      <Link to="/home" style={{ textDecoration: "none" }}>
+        <Button variant="text" sx={{ color: "black", mx: 2 }}>
+          <HomeIcon /> Home
+        </Button>
+      </Link>
+      <Link to={`${url}`} style={{ textDecoration: "none" }}>
+        <Button variant="text" sx={{ color: "black", mx: 2 }}>
           <DashboardIcon />
           Dashboard
         </Button>
@@ -52,25 +61,25 @@ function Dashboard(props) {
       <br />
       {admin && (
         <Box>
-          <Link to={`${url}/allorders`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/allorders`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <ShoppingCartIcon />
-              Manage All Order
+              All Order
             </Button>
           </Link>
-          <Link to={`${url}/makeadmin`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/makeadmin`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <PersonIcon /> Make Admin
             </Button>
           </Link>
-          <Link to={`${url}/addproduct`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/addproduct`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <AddIcon />
               Add Product
             </Button>
           </Link>
-          <Link to={`${url}/manageproduct`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/manageproduct`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <AddIcon /> Manage Product
             </Button>
           </Link>
@@ -78,36 +87,28 @@ function Dashboard(props) {
       )}
       {!admin && (
         <Box>
-          <Link to={`${url}/myorder`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/myorder`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <ShoppingCartIcon />
               My Order
             </Button>
           </Link>
-          <Link to={`${url}/payment`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/payment`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <PaymentIcon /> Payment
             </Button>
           </Link>
-          <Link to={`${url}/review`}>
-            <Button variant="text" sx={{ color: "black" }}>
+          <Link to={`${url}/review`} style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ color: "black", mx: 2 }}>
               <CreateIcon /> Reviews
             </Button>
           </Link>
         </Box>
       )}
-
-      <br />
-      <Link to="/home">
-        <Button variant="text" sx={{ color: "black", textDecoration: "none" }}>
-          <HomeIcon /> Home
-        </Button>
-      </Link>
-
       <Button
         variant="contained"
         onClick={logout}
-        sx={{ color: "white", background: "red" }}
+        sx={{ color: "white", background: "red", mx: 3 }}
       >
         <LogoutIcon /> Logout
       </Button>
@@ -125,7 +126,8 @@ function Dashboard(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          background: "#495454",
+          background: "black",
+          boxShadow: "none",
         }}
       >
         <Toolbar>

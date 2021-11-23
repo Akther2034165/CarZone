@@ -1,20 +1,25 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
 import "./DashboardHome.css";
 const DashboardHome = () => {
   const { user } = useAuth();
   return (
-    <div>
-      <h1 className="text-center">WELCOME TO {user.displayName} DASHBOARD</h1>
-      <p className="text-center">you can explore your data here</p>
-      <div className="dashHome">
-        <Link to="/home">
-          <Button variant="success">BACK TO HOME</Button>
-        </Link>
-      </div>
-    </div>
+    <Container>
+      <Row>
+        <Col lg={12} sm={12}>
+          <h1 className="text-center">
+            WELCOME TO {user.displayName} DASHBOARD
+          </h1>
+          <h5 className="text-center">Hey!! You can explore your data here</h5>
+        </Col>
+        <img
+          className="welcomeimg"
+          src="https://i.ibb.co/vDKBJVb/welcome.jpg"
+          alt=""
+        />
+      </Row>
+    </Container>
   );
 };
 
