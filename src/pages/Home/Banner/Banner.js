@@ -5,6 +5,7 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Banner.css";
+import { Link } from "react-router-dom";
 const bannerBg = {
   background: `url(${background})`,
   backgroundSize: "cover",
@@ -32,9 +33,16 @@ const Banner = () => {
                   Mirpur, Dhaka and CarZone #2 at 3055 Agrabad, Chittagong
                 </p>
               </div>
-              <Button variant="danger">
-                Explore More <DoubleArrowIcon />
-              </Button>
+              <div className="bannerbtn">
+                <Link to="/about">
+                  <Button variant="danger">Get Started</Button>
+                </Link>
+                <Link to="/explore" style={{ marginLeft: "10px" }}>
+                  <Button variant="outline-danger">
+                    Explore More <DoubleArrowIcon />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </Col>
 

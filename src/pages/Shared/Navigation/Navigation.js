@@ -28,6 +28,17 @@ const Navigation = () => {
                 Home
               </NavLink>
               <NavLink
+                to="/about"
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  margin: "auto",
+                  marginLeft: "10px",
+                }}
+              >
+                About
+              </NavLink>
+              <NavLink
                 to="/explore"
                 style={{
                   textDecoration: "none",
@@ -38,21 +49,23 @@ const Navigation = () => {
               >
                 Explore
               </NavLink>
+              {user?.email && (
+                <NavLink
+                  to="/dashboard"
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    marginLeft: "10px",
+                  }}
+                >
+                  Dashboard
+                </NavLink>
+              )}
             </Nav>
             <Nav>
+              <span className="username">{user?.displayName}</span>
               {user?.email ? (
                 <Box>
-                  <NavLink
-                    to="/dashboard"
-                    style={{
-                      textDecoration: "none",
-                      color: "white",
-                      margin: "auto",
-                      marginRight: "15px",
-                    }}
-                  >
-                    Dashboard
-                  </NavLink>
                   <Button onClick={logout} variant="danger">
                     Logout
                   </Button>
@@ -62,7 +75,6 @@ const Navigation = () => {
                   <Button variant="success">Login</Button>
                 </NavLink>
               )}
-              <span className="username">{user?.displayName}</span>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -10,6 +10,7 @@ import AllCars from "./pages/Explore/AllCars/AllCars";
 import Dashborad from "./pages/Dashboard/Dashboard/Dashborad";
 import Purchase from "./pages/Explore/Purchase/Purchase";
 import NotFound from "./pages/NotFound/NotFound";
+import About from "./pages/Home/About/About";
 function App() {
   return (
     <AuthProvider>
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
           <PrivateRoute path="/explore">
             <AllCars />

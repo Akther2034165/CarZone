@@ -1,3 +1,7 @@
 .bannerinfo {
   margin-top: 30%;
 }
+.bannerbtn {
+  display: flex;
+  margin-top: 20px;
+}
