@@ -6,10 +6,9 @@
 #cardImg {
   height: 220px;
 }
-.cards {
-  border-radius: 10px;
-  height: 410px;
-}
 .purchaceBtn {
   border: 20px;
+}
+.carCard {
+  height: 400px;
 }

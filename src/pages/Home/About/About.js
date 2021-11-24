@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Navigation from "../../Shared/Navigation/Navigation";
 import PaymentIcon from "@mui/icons-material/Payment";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -60,7 +60,9 @@ const About = () => {
             <div>
               <div className="payment">
                 <div>
-                  <ThumbUpIcon sx={{ fontSize: "50px", color: "goldenrod" }} />
+                  <ThumbUpOutlinedIcon
+                    sx={{ fontSize: "50px", color: "#a6b3d1" }}
+                  />
                 </div>
                 <div className="mx-3">
                   <h5>Trusted & Genuine Parts</h5>

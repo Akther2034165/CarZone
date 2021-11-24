@@ -65,7 +65,10 @@ const Login = () => {
                   <input type="submit" value="Login" />
 
                   <div className="signup_link">
-                    NOT A MEMBER? PLEASE<Link to="/register"> REGISTER</Link>
+                    NOT A MEMBER? PLEASE.
+                    <Link to="/register" style={{ textDecoration: "none" }}>
+                      REGISTER
+                    </Link>
                   </div>
                 </form>
                 <Button onClick={handleGoogleSignIn} className="googleBtn">
@@ -76,7 +79,11 @@ const Login = () => {
           </div>
         </Col>
         <Col xs={12} lg={6}>
-          <img src={img} className="loginImg" alt="" />
+          <img
+            src="https://i.ibb.co/tm9Vw0R/login.jpg"
+            className="loginImg"
+            alt=""
+          />
         </Col>
       </Row>
     </Container>

@@ -4,7 +4,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import PersonIcon from "@mui/icons-material/Person";
@@ -12,8 +11,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 import AddIcon from "@mui/icons-material/Add";
-import CreateIcon from "@mui/icons-material/Create";
+import AddCommentIcon from "@mui/icons-material/AddComment";
 import LogoutIcon from "@mui/icons-material/Logout";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
@@ -80,7 +80,7 @@ function Dashboard(props) {
           </Link>
           <Link to={`${url}/manageproduct`} style={{ textDecoration: "none" }}>
             <Button variant="text" sx={{ color: "black", mx: 2 }}>
-              <AddIcon /> Manage Product
+              <ProductionQuantityLimitsIcon /> Manage Product
             </Button>
           </Link>
         </Box>
@@ -100,7 +100,7 @@ function Dashboard(props) {
           </Link>
           <Link to={`${url}/review`} style={{ textDecoration: "none" }}>
             <Button variant="text" sx={{ color: "black", mx: 2 }}>
-              <CreateIcon /> Reviews
+              <AddCommentIcon /> Reviews
             </Button>
           </Link>
         </Box>
@@ -108,7 +108,7 @@ function Dashboard(props) {
       <Button
         variant="contained"
         onClick={logout}
-        sx={{ color: "white", background: "red", mx: 3 }}
+        sx={{ color: "white", background: "red", mx: 3, mt: 45 }}
       >
         <LogoutIcon /> Logout
       </Button>

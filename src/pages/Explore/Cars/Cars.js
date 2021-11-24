@@ -14,7 +14,7 @@ const Cars = (props) => {
   return (
     <Col lg={4} md={6} sm={12}>
       <div data-aos="zoom-in-right">
-        <div className="cards shadow border-1 mb-4" id="card">
+        <div className="carCard shadow border-1 mb-4">
           <img src={img} className="card-img-top" id="cardImg" alt="..." />
           <div className="card-body">
             <h5 className="card-title ms-1">{name}</h5>

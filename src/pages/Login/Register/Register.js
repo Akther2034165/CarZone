@@ -85,7 +85,10 @@ const Register = () => {
                     <input type="submit" value="Register" />
 
                     <div className="signup_link">
-                      ALREADY A MEMBER?<Link to="/login"> LOGIN</Link>
+                      ALREADY A MEMBER?
+                      <Link style={{ textDecoration: "none" }} to="/login">
+                        LOGIN
+                      </Link>
                     </div>
                   </form>
                 )}
@@ -97,7 +100,11 @@ const Register = () => {
           </div>
         </Col>
         <Col xs={12} lg={6}>
-          <img src={img} className="loginImg" alt="" />
+          <img
+            src="https://i.ibb.co/MNQKXfd/register.jpg"
+            className="loginImg"
+            alt=""
+          />
         </Col>
       </Row>
     </Container>

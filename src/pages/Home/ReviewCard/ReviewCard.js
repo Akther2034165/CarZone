@@ -34,11 +34,10 @@ const ReviewCard = (props) => {
               <h5 style={{ color: "#3498db", fontWeight: 600 }}>{name}</h5>
             </div>
             <div>
-              <h6 style={{ margin: "0" }}>Rating: {rating}</h6>
               <ReactStars
                 isHalf={true}
                 edit={false}
-                size={24}
+                size={20}
                 color="#666"
                 count={Number(rating)}
                 value={Number(rating)}
