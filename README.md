@@ -12,6 +12,9 @@ This website is usually a website which is related to car buying website.With th
 - In Dashboard page, an user can see his/her booked car from My Order Page.
 - Theres also an Admin,who can add a car,manage order,manage cars,make admin to other user in dashboard page.
 
+# Admin
+- email: admin@admin.com
+- password: 123456
 # Live site link
 
 https://car-zone-b7c49.web.app/
